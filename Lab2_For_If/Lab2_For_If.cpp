@@ -54,6 +54,7 @@ void task2()
 void task3()
 {
     double sum=0, x=0, count=0;
+    cout << "Enter negative number to exit\n";
     cout << "Enter numbers\n";
     while (x!=-1)  //-1 не символ
     {
@@ -82,18 +83,14 @@ int main()
         {
         case 0: break;
         case 1:
-        {
             task1();
             break;
         case 2: 
-        {
             task2();
             break;
-        }
         case 3:
             task3();
             break;
-        }
         default: return 0;
             break;
         }
