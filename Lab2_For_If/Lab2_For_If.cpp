@@ -81,7 +81,7 @@ int main()
         system("cls"); // Чистит экран
         switch (numtask)
         {
-        case 0: break;
+        //case 0: break;
         case 1:
             task1();
             break;

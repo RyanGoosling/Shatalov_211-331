@@ -64,11 +64,11 @@ int main()
     cout << "\nx = " << b / a << "\nAnswer: " << b / a;
     
     //task 5
-    double x, y;
+    int x, y;
     cout << "\n\n5. \n";
     cout << "Enter the coordinates of a line segment:\n";
     cin >> x >> y;
-    cout << "The middle of the segment is at the point with the coordinate: " << (x + y) / 2;
+    cout << "The middle of the segment is at the point with the coordinate: " << (x + y) / 2.;
     return 0;
 }
 
