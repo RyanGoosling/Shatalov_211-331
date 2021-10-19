@@ -56,7 +56,7 @@ void buble(int arr[], int size)
                 swap(arr[j], arr[j + 1]);
 }
 
-/*void last_digit(int arr[], int size)
+void last_digit(int arr[], int size)
 {
     int i, j, tmp;
     for (i = 0; i < size; i++)
@@ -64,10 +64,10 @@ void buble(int arr[], int size)
         {
             if ((arr[j] % 10) > (arr[j + 1] % 10))
                 swap(arr[j], arr[j + 1]);
-            if (((arr[j] % 10) > (arr[j + 1] % 10)) && (arr[j] > arr[j + 1]))
+            if (((arr[j] % 10) == (arr[j + 1] % 10)) && (arr[j] < arr[j + 1]))
                 swap(arr[j], arr[j + 1]);
         }
-}*/
+}
 
 bool comp(const int& a, const int& b) 
 {
@@ -100,7 +100,8 @@ int main()
             buble(mas, size_of_mas);
             break;
         case 4: 
-            sort(mas, mas + size_of_mas, comp);//(array, array + last index, operator true or false)
+            last_digit(mas, size_of_mas);
+            //sort(mas, mas + size_of_mas, comp);//(array, array + last index, operator true or false)
             //print_mas(mas, size_of_mas);
             break;
         default: 
