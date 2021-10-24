@@ -19,7 +19,7 @@ void print_mas_c(char temp_mas[], int n)
 
 int lesson()
 {
-    int n; //& - указатель на * - разыменование 
+    int n; //& - ссылка на адрес на * - разыменование (указатель)
     int mas[10], mas1[10], mas2[10];
     for (int i = 0; i < 10; i++) mas[i] = i;
     int number_int = 12;
