@@ -84,7 +84,7 @@ int main()
 		cout << "Choose number of task\n"; //    D:\Prog\Shatalov_331\Lab3.1_StaticArray\Lab3.1_StaticArray.cpp
 		cout << "1. Task 1: File format\n" << "2. Task 2: File name\n" << "3. Task 3: File path\n" << "4. Task 4: Disk\n" 
 			<<"5. Task 5: File rename\n" << "6. Task 6: Creat copy\n" << "0. Exit\n";
-		cin >> choise; // D:\\Prog\\Shatalov_331\\ex.txt
+		cin >> choise; // D:\\Prog\\Shatalov_331\\Zaprosy_SQL_urok_1.txt
 		system("pause"); // Для продолжения...
 		system("cls"); // Чистит экран
 		switch (choise)
