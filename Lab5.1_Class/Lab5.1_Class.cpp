@@ -51,7 +51,6 @@ int main()
     int row_arr, col_arr, num = 1;
     int numtask = 1;            
     int choise = 0;
-    bool flag = true;
 
     cout << "Number of rows = ";
     cin >> row_arr;
@@ -60,7 +59,6 @@ int main()
 
     Matrix MatrA(row_arr, col_arr); //создание объкта MatrA класса Matrix
     Matrix MatrB(row_arr, col_arr);
-    Matrix MatrC(row_arr);
 
     while (numtask != 0) {
         cout << "\n\nChoose number of task\n";
@@ -77,13 +75,11 @@ int main()
             cin >> row_arr; 
             cout <<"2. Number of columns = ";
             cin >> col_arr;
-            cout << "For 1st or 2nd or 3rd matrix?\n";
+            cout << "For 1st or 2nd matrix?\n";
             cin >> choise;
             if (choise == 1)
-                MatrA.auto_input(row_arr, col_arr);
-            else if (choise == 2)
-                MatrB.auto_input(row_arr, col_arr);
-            else MatrC.auto_input(row_arr, col_arr);
+                 MatrA.auto_input(row_arr, col_arr);
+            else MatrB.auto_input(row_arr, col_arr);
             break;
         case 2:
             cout << "MatrA.get_rows() = " << MatrA.get_rows() << endl;
@@ -92,14 +88,26 @@ int main()
             cout << "MatrA.get_columns() = " << MatrA.get_columns() << endl;
             break;
         case 4:
-            cout << "Enter 1. Number of rows; 2. Number of columns: ";
-            cin >> row_arr >> col_arr;
-            MatrA.input(row_arr, col_arr);
+            cout << "1. Common Matrix;\n2. Square Matrix.\n";
+            cin >> choise;
+            if (choise == 1)
+            {
+                cout << "Enter: 1. Number of rows = ";
+                cin >> row_arr;
+                cout << "2. Number of columns = ";
+                cin >> col_arr;
+                MatrA.input(row_arr, col_arr);
+            }
+            else 
+            {
+                cout << "Enter 1. Number of rows and columns: ";
+                cin >> row_arr;
+                MatrA.input(row_arr);
+            }
             break;
         case 5:
             MatrA.print();
             MatrB.print();
-            MatrC.print(flag);
             break;
         case 6:
             cout << "Enter 1. Number of rows = ";
@@ -118,10 +126,9 @@ int main()
             break;
         case 8:
             MatrA.sum(MatrB);
-            MatrA.print();
             break;
         case 9:
-            MatrA.mult(MatrA, MatrB);
+            MatrA.mult(MatrB);
             break;
         case 10:
             cout << "Enter number for multiplication\n";
@@ -133,12 +140,11 @@ int main()
                 MatrA.print();
             break;
         case 11:
-            MatrC.det();
+            MatrA.det();
             break;
         case 666:
             MatrA.check_memory();
             MatrB.check_memory();
-            MatrC.check_memory();
             break;
         default: system("cls");
             break;

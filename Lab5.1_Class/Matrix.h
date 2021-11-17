@@ -4,7 +4,10 @@ class Matrix
 private: //доступно только классу Матрикс
 	int row, col;
 	int* elem;
-	int** matr;
+
+	int** submatrix(int** matrix, unsigned int n, unsigned int x, unsigned int y);
+
+	int determinant(int** matrix, unsigned int n);
 
 protected:
 	//доступно внутри класса и наследникам 
@@ -14,7 +17,6 @@ public:
 	
 	Matrix();//конструктор поумолчанию, то что создаёт объект, память под элемент
 	Matrix(int row_temp, int col_temp);
-	Matrix(int n); //Перегрузка для объявления двумерного массива
 	~Matrix();//деструктор, уничтажает память под объект, которую выделяли
 	Matrix(const Matrix& orig); //конструктор копирования
 
@@ -22,7 +24,7 @@ public:
 
 	void check_memory();
 
-	int get_elem(int i, int j);
+	int get_elem(int i, int j) const;
 
 	int get_rows();
 
@@ -30,23 +32,19 @@ public:
 
 	void print();
 
-	void print(bool flag);
-
 	void input(int new_row, int new_col);
+
+	void input(int new_row);
 
 	void auto_input(int new_row, int new_col);
 
 	int trace();
 
-	void mult_by_num(double num);
+	void mult_by_num(int num);
 
-	bool mult(Matrix first, Matrix second);
+	bool mult(Matrix second);
 
 	bool sum(Matrix second);
-
-	int** submatrix(int** matrix, unsigned int n, unsigned int x, unsigned int y);
-
-	int determinant(int** matrix, unsigned int n);
 
 	void det();
 };
