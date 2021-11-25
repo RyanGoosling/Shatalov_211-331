@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab5.1_Class", "Lab5.1_Clas
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab5.2_Overloading", "Lab5.2_Overloading\Lab5.2_Overloading.vcxproj", "{6A6666B5-030A-4417-8013-66C590EFFAF3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab5.3_OverloadOperator", "Lab5.3_OverloadOperator\Lab5.3_OverloadOperator.vcxproj", "{C62BF242-598A-42EE-8666-C873A84FF39D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{6A6666B5-030A-4417-8013-66C590EFFAF3}.Release|x64.Build.0 = Release|x64
 		{6A6666B5-030A-4417-8013-66C590EFFAF3}.Release|x86.ActiveCfg = Release|Win32
 		{6A6666B5-030A-4417-8013-66C590EFFAF3}.Release|x86.Build.0 = Release|Win32
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Debug|x64.ActiveCfg = Debug|x64
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Debug|x64.Build.0 = Debug|x64
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Debug|x86.ActiveCfg = Debug|Win32
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Debug|x86.Build.0 = Debug|Win32
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Release|x64.ActiveCfg = Release|x64
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Release|x64.Build.0 = Release|x64
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Release|x86.ActiveCfg = Release|Win32
+		{C62BF242-598A-42EE-8666-C873A84FF39D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
