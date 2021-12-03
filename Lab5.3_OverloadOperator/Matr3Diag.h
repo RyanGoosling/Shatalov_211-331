@@ -16,8 +16,10 @@ public:
 	Matr3Diag(const Matr3Diag& orig);
 
 	int get_size() const;
+	
 	void print() const;
 	int get_elem(int i, int j) const;
+	void set_elem(int x, int i, int j);
 	void input(int n);
 	
 	void check_memory() const;
@@ -32,11 +34,13 @@ public:
 	Matr3Diag operator- ();
 	friend std::ostream& operator<< (std::ostream& out, const Matr3Diag& temp);
 	friend std::istream& operator>> (std::istream& in, Matr3Diag& temp);
+	Matr3Diag operator* (int num);
 };
 
 Matr3Diag operator+ (const Matr3Diag& MatrB, const Matr3Diag& MatrA);
 Matr3Diag operator- (const Matr3Diag& MatrA, const Matr3Diag& MatrB);
 Matr3Diag operator* (const Matr3Diag& MatrA, const Matr3Diag& MatrB);
+
 	/*
 		Перегрузка операторов
 			- внутри класса (в ходе работы объект меняется,

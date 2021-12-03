@@ -37,14 +37,14 @@ void Matr3Diag::print() const
 	for (int i = 0; i < this->size; i++)
 	{
 		for (int j = 0; j < this->size; j++)
-			std::cout << i * this->size + j << ": " << get_elem(i, j)<<"\t";
+			std::cout << get_elem(i, j) <<"\t"; //<< i * this->size + j << ": " this->elem[i * this->size + j]
 		std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }
 
 int Matr3Diag::get_elem(int i, int j) const
-{
+{	
 	if (i == j)
 		return this->elem[this->size + i];
 	if (i == j - 1)
@@ -52,6 +52,21 @@ int Matr3Diag::get_elem(int i, int j) const
 	if (i == j + 1)
 		return this->elem[2 * this->size + i];
 	else return 0;
+}
+
+void Matr3Diag::set_elem(int x, int i, int j)
+{
+	if (i == j)
+		 this->elem[this->size + i] = x;
+	else if (i == j - 1)
+		 this->elem[i] = x;
+	else if (i == j + 1)
+		 this->elem[2 * this->size + i] = x;
+	//if ((j == 1) and (i == 1))
+		//this->elem[i * this->size + j] = -1;
+	//if ((2 * this->size + i) == 12)
+		//this->elem[2 * this->size + i] = -1;
+	else this->elem[i * this->size + j] = 0;
 }
 
 void Matr3Diag::input(int n)
@@ -202,12 +217,15 @@ void Matr3Diag::operator*=(const Matr3Diag& temp)
 	{
 		for (int j = 0; j < this->size; j++)
 		{
-			this->elem[i * this->size + j] = res[i * this->size + j];
-			std::cout <<i*this->size + j<<": " << this->elem[i * this->size + j] << "\t";
+			//if ((i == j) or (i == j - 1) or (i == j + 1))
+				//this->elem[i * this->size + j] = res[i * this->size + j];
+			set_elem(res[i * this->size + j], i, j);
+			std::cout << res[i * this->size + j] << "\t"; //<<i*this->size + j<<": " 
 		}
 		std::cout << std::endl;
 	}
 	std::cout << std::endl;
+
 	delete[] res;
 }
 
@@ -216,6 +234,14 @@ Matr3Diag Matr3Diag::operator-()
 	for (int i = 0; i < 3 * this->size; i++)
 		this->elem[i] *= (-1);
 	return Matr3Diag();
+}
+
+Matr3Diag Matr3Diag::operator* (int num)
+{
+	Matr3Diag temp(this->size);
+	for (int i = 0; i < 3 * this->size; i++)
+		 temp.elem[i] = this->elem[i] * num;
+	return temp;
 }
 
 std::ostream& operator<<(std::ostream& out, const Matr3Diag& temp)
@@ -278,3 +304,4 @@ Matr3Diag operator*(const Matr3Diag& MatrA, const Matr3Diag& MatrB)
 	res *= MatrB;
 	return res;
 }
+
