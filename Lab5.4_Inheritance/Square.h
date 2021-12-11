@@ -2,7 +2,7 @@
 #include "Position.h"
 
 class Square :
-    public Position
+    virtual public Position
 {
 private:
 

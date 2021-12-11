@@ -3,7 +3,7 @@
 #include "Circle.h"
 
 class CircleInSquare :
-	public Circle, Square
+	virtual public Circle, Square
 {
 public:
 

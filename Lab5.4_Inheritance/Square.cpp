@@ -7,16 +7,16 @@ Square::Square()
 	this->m_size = 0;
 }
 
-Square::Square(const Square& orig)
+Square::Square(const Square& orig):Position(orig)
 {
-	this->Position::set_position(orig.Position::get_y(), orig.Position::get_x());
+	//this->Position::set_position(orig.Position::get_y(), orig.Position::get_x());
 
 	this->m_size = orig.m_size;
 }
 
-Square::Square(int x, int y, int size)
+Square::Square(int x, int y, int size):Position(x, y)
 {
-	this->Position::set_position(x, y);
+	//this->Position::set_position(x, y);
 	this->m_size = size;
 }
 

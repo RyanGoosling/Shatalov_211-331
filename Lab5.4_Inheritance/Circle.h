@@ -2,7 +2,7 @@
 #include "Position.h"
 
 class Circle :
-    public Position
+    virtual public Position
 {
 private:
 
