@@ -29,18 +29,15 @@ using namespace std;
 	cout << (st < st2);
 	*/
 
-int main()
+bool exp(string orig)
 {
 	bool flag = true;
 	stack<char> exp; //expression
-	string orig;
-	cout << "Enter expression:\n";
-	cin >> orig;
 	for (int i = 0; i < orig.size(); i++)
 	{
 		if ((orig[i] == '(') or (orig[i] == '{') or (orig[i] == '['))
 			exp.push(orig[i]);
-		else 
+		else
 		{
 			if (orig[i] == ')')
 				if (exp.top() == '(')
@@ -54,7 +51,7 @@ int main()
 			if (orig[i] == ']')
 				if (exp.top() == '[')
 					exp.pop();
-				else 
+				else
 				{
 					flag = false;
 					break;
@@ -63,14 +60,25 @@ int main()
 			if (orig[i] == '}')
 				if (exp.top() == '{')
 					exp.pop();
-				else 
+				else
 				{
 					flag = false;
 					break;
 				}
 		}
 	}
-	if (flag)
+	return flag;
+}
+
+
+int main()
+{
+	string orig;
+
+	cout << "Enter expression:\n";
+	cin >> orig;
+
+	if(exp(orig))
 		cout << "\nYes\n";
 	else cout << "\nNo\n";
 
