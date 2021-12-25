@@ -49,12 +49,12 @@ bool cmp(point A, point B) //компаратор для сортировки т
 
 bool cw(point A, point B, point C)  //clockwise - по часовой стрелке
 {
-	return A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y) < 0;
+	return (B.x - A.x) * (C.y - B.y) - (B.y - A.y) * (C.x - B.x) < 0; // (B.x - A.x) * (C.y - B.y) - (B.y - A.y) * (C.x - B.x)    A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y)
 }
 
 bool ccw(point A, point B, point C) //counterclockwise - против чаосовой стрелке
 {
-	return A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y) > 0;
+	return (B.x - A.x) * (C.y - B.y) - (B.y - A.y) * (C.x - B.x) > 0;
 }
 
 void convex_hull(deque<point>& A) 
@@ -98,6 +98,9 @@ void convex_hull(deque<point>& A)
 7 4
 5 1
 2 2
+
+3 4 
+5 4
 */
 
 int main()

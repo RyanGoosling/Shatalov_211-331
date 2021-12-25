@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab6.1_Stack", "Lab6.1_Stac
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab6.2_deq", "Lab6.2_deq\Lab6.2_deq.vcxproj", "{DE0CEFC5-D9FB-4B3A-A003-FED1770B70B0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lad6.3-6.6_queue_list_set_map_vector_template", "Lad6.3-6.6_queue_list_set_map_vector_template\Lad6.3-6.6_queue_list_set_map_vector_template.vcxproj", "{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{DE0CEFC5-D9FB-4B3A-A003-FED1770B70B0}.Release|x64.Build.0 = Release|x64
 		{DE0CEFC5-D9FB-4B3A-A003-FED1770B70B0}.Release|x86.ActiveCfg = Release|Win32
 		{DE0CEFC5-D9FB-4B3A-A003-FED1770B70B0}.Release|x86.Build.0 = Release|Win32
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Debug|x64.ActiveCfg = Debug|x64
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Debug|x64.Build.0 = Debug|x64
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Debug|x86.ActiveCfg = Debug|Win32
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Debug|x86.Build.0 = Debug|Win32
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Release|x64.ActiveCfg = Release|x64
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Release|x64.Build.0 = Release|x64
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Release|x86.ActiveCfg = Release|Win32
+		{B524FEB1-F58B-4136-9F8A-4D9B35D0142B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
