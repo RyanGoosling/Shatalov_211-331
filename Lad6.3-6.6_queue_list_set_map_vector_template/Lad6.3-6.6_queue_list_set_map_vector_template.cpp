@@ -56,7 +56,7 @@ void task_queue()
 	   // cout << "D";
 }
 
-void task_set()
+void task_set() //5 2 3 7 5
 {
 	/*
 	Преподаватель на экзамене дал студентам тест. Один из студентов решил узнать правильные ответы. 
@@ -84,6 +84,8 @@ void task_set()
 			res.insert(pair<string, int>(name,score));
 	}
 	
+	cout << endl;
+
 	for (auto it = res.begin(); it != res.end(); it++)
 		cout << it->first << " " <<it->second<< endl;
 
@@ -116,7 +118,6 @@ void task_list()
 	list<pair<int, string>> ex;
 	string last_name;
 	int group, n;
-
 	cout << "Enter number: ";
 	cin >> n;
 	cout << "Enter list of students:\n";
