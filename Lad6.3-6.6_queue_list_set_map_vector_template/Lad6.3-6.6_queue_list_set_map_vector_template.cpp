@@ -14,7 +14,10 @@ void task_queue()
 {
 	//Напечатать в порядке возрастания первые n натуральных чисел, в разложение которых на простые множители входят только 2, 3 и 5.
 
-	deque<int> q2 = { 2 }, q3 = { 3 }, q5 = { 5 };
+	queue<int> q2, q3, q5;
+	q2.push(2);
+	q3.push(3);
+	q5.push(5);
 	int n, res;
 	cout << "Enter n: ";
 	cin >> n;
@@ -27,16 +30,16 @@ void task_queue()
 
 		cout << res << " ";
 
-		q2.push_back(2 * res);
-		q3.push_back(3 * res);
-		q5.push_back(5 * res);
+		q2.push(2 * res);
+		q3.push(3 * res);
+		q5.push(5 * res);
 
 		if (res == q2.front())
-			q2.pop_front();
+			q2.pop();
 		if (res == q3.front())
-			q3.pop_front();
+			q3.pop();
 		if (res == q5.front())
-			q5.pop_front();
+			q5.pop();
 	} 
 
 	cout << endl<<endl;
